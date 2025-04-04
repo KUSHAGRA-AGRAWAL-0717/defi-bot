@@ -10,32 +10,38 @@ const Index = () => {
     {
       title: "AI-Powered Content Creation",
       description: "Generate engaging Twitter threads, blog summaries, and captions using AI directly from Telegram.",
-      icon: "✍️"
+      icon: "✍️",
+      path: "/content"
     },
     {
       title: "DeFi Market Analysis",
       description: "Get real-time price alerts, trend predictions, and AI-driven market insights for tokens, NFTs, and liquidity pools.",
-      icon: "📊"
+      icon: "📊",
+      path: "/content"
     },
     {
       title: "News Summarization",
       description: "AI summarizes crypto news, research papers, and DeFi updates into short, easy-to-digest messages.",
-      icon: "📰"
+      icon: "📰",
+      path: "/content"
     },
     {
       title: "Automated Content Posting",
       description: "Schedule and auto-post AI-generated content on Twitter, Telegram, and LinkedIn.",
-      icon: "🔄"
+      icon: "🔄",
+      path: "/content"
     },
     {
       title: "Personalized Watchlists",
       description: "Create watchlists for DeFi tokens, and AI will notify you of important movements.",
-      icon: "👁️"
+      icon: "👁️",
+      path: "/watchlist"
     },
     {
-      title: "Voice-to-Content",
+      title: "News",
       description: "Record your thoughts and convert them into well-structured tweets and posts.",
-      icon: "🎤"
+      icon: "🎤",
+      path: "/news"
     }
   ];
 
@@ -85,7 +91,8 @@ const Index = () => {
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, index) => (
-                <div 
+                <Link 
+                to={feature.path}
                   key={index} 
                   className="crypto-card group hover:border-brand-purple/50 transition-all"
                 >
@@ -96,7 +103,7 @@ const Index = () => {
                   <p className="text-gray-600 dark:text-gray-300">
                     {feature.description}
                   </p>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
