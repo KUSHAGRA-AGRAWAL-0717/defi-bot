@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from routers import content, market
 from fastapi.middleware.cors import CORSMiddleware
-from routers import news, schedule, watchlist
+from routers import news, schedule, watchlist, ccxt
 app = FastAPI()
 
 app.add_middleware(
@@ -17,6 +17,7 @@ app.include_router(market.router, prefix="/market-insights")
 
 app.include_router(news.router, prefix="/summarize-news")
 app.include_router(schedule.router, prefix="/schedule-post")
+app.include_router(ccxt.router, prefix="/ccxt")
 # app.include_router(watchlist.router, prefix="/watchlist")
 
 
