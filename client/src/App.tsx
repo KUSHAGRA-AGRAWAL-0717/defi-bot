@@ -12,6 +12,7 @@ import ContentHub from "./pages/ContentHub";
 import News from "./pages/News";
 import Watchlist from "./pages/Watchlist";
 import NotFound from "./pages/NotFound";
+import MarketAnalyzer from "./pages/MarketAnalyzer";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => (
           <Route path="/content" element={<ContentHub />} />
           <Route path="/news" element={<News />} />
           <Route path="/watchlist" element={<Watchlist />} />
+          <Route path="/analyzer" element={<MarketAnalyzer />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

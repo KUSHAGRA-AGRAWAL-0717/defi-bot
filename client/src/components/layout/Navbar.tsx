@@ -16,7 +16,8 @@ const Navbar = () => {
     { name: "Dashboard", path: "/dashboard" },
     { name: "Content Hub", path: "/content" },
     { name: "News", path: "/news" },
-    { name: "Watchlist", path: "/watchlist" }
+    { name: "Watchlist", path: "/watchlist" },
+    { name: "Market Analyzer", path: "/analyzer" }
   ];
 
   return (
