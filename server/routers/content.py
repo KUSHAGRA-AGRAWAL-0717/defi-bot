@@ -48,7 +48,7 @@ def generate_content_with_deepseek(prompt):
 
 
 @router.post("/")
-async def generate_content(topic, format_type):
+async def generate_content(topic, format_type,tone):
     prompt = f"Generate a {format_type} about {topic}."
     
     # Call Gemini AI
