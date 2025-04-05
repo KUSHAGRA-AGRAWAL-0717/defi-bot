@@ -58,7 +58,7 @@ async def generate_content(request: ContentRequest):
     
     # Call Gemini AI
     gemini_result = generate_content_with_gemini(prompt)
-    print("Gemini API Response:", gemini_result)
+    # print("Gemini API Response:", gemini_result)
     
     # Call DeepSeek AI
     # deepseek_result = generate_content_with_deepseek(prompt)
